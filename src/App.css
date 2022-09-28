@@ -1,1 +1,19 @@
+.text{
+    color: rgb(251, 252, 253);
+    margin-left: 5rem;
+    padding-top: 4rem;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
 
+.para{
+    color: aqua;
+    margin-left: 5rem;  
+
+}
+
+.btn{
+    margin-left: 8rem;
+    margin-top: 3rem;
+}

@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 export default class About extends Component {
   render() {
     return (
-      <div> This is About </div>
+      <div> 
+        <h1 className='text'>Hi!. everyOne</h1> 
+      </div>
     );
   }
 }

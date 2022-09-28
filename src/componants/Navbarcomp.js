@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import About from '../Pages/About';
 import Home from '../Pages/Home';
-import Signin from '../Pages/Signin';
+import Login from '../Pages/Login';
 import './Navbarcomp.css';
 
 export default class Navbarcomp extends Component {
@@ -24,7 +24,7 @@ export default class Navbarcomp extends Component {
           <Navbar.Collapse id="basic-navbar-nav">          
             <Nav >
               <Nav.Link as={Link} to={"/home"}>Home</Nav.Link>
-              <Nav.Link as={Link} to={"/signin"}>Sign-In</Nav.Link>
+              <Nav.Link as={Link} to={"/Login"}>Log-In</Nav.Link>
               <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
 
     
@@ -51,7 +51,7 @@ export default class Navbarcomp extends Component {
 
         <Routes>
           <Route path="/home" element={<Home/>}/>
-          <Route path="/signin" element={<Signin/>}/>
+          <Route path="/Login" element={<Login/>}/>
           <Route path="/about" element={<About/>}/>
         </Routes>
 
