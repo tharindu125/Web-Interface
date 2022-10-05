@@ -1,5 +1,5 @@
 import React from 'react'
-import img from "../image/img.jpg";
+import img from "../image/img2.jpg";
 /*import "./Home.css";*/
 import Homecon from './Homecon';
 

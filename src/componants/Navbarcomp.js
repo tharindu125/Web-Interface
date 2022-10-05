@@ -18,12 +18,12 @@ export default class Navbarcomp extends Component {
       <div>
         <Navbar bg="dark" variant={"dark"} expand="lg">
         <Container>
-          <Navbar.Brand href="">Heart-Care</Navbar.Brand>
+          <Navbar.Brand href="/">Heart-Care</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           <Navbar.Collapse id="basic-navbar-nav">          
             <Nav >
-              <Nav.Link as={Link} to={"/home"}>Home</Nav.Link>
+              {/* <Nav.Link as={Link} to={"/"}>Home</Nav.Link> */}
               <Nav.Link as={Link} to={"/Login"}>Log-In</Nav.Link>
               <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
 
@@ -50,7 +50,7 @@ export default class Navbarcomp extends Component {
       <div>
 
         <Routes>
-          <Route path="/home" element={<Home/>}/>
+          <Route path="/" element={<Home/>}/> 
           <Route path="/Login" element={<Login/>}/>
           <Route path="/about" element={<About/>}/>
         </Routes>
