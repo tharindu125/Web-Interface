@@ -18,7 +18,7 @@ export default class Navbarcomp extends Component {
       <div>
         <Navbar bg="dark" variant={"dark"} expand="lg">
         <Container>
-          <Navbar.Brand href="/">Heart-Care</Navbar.Brand>
+          <Navbar.Brand href="">Heart-Care</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
           <Navbar.Collapse id="basic-navbar-nav">          
