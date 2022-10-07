@@ -9,6 +9,7 @@ import {
 import About from '../Pages/About';
 import Home from '../Pages/Home';
 import Login from '../Pages/Login';
+import Signin from '../Pages/Signin';
 import './Navbarcomp.css';
 
 export default class Navbarcomp extends Component {
@@ -25,12 +26,12 @@ export default class Navbarcomp extends Component {
             <Nav >
               {/* <Nav.Link as={Link} to={"/"}>Home</Nav.Link> */}
               <Nav.Link as={Link} to={"/Login"}>Log-In</Nav.Link>
-              <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
+              <Nav.Link as={Link} to={"/Signin"}>Sign-In</Nav.Link>
 
     
               <NavDropdown title="Dropdown" id="basic-nav-dropdown" >
 
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="/Forgotpw">Forgotpw</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2"> Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
               <NavDropdown.Divider />
@@ -52,7 +53,7 @@ export default class Navbarcomp extends Component {
         <Routes>
           <Route path="/" element={<Home/>}/> 
           <Route path="/Login" element={<Login/>}/>
-          <Route path="/about" element={<About/>}/>
+          <Route path="/Signin" element={<Signin/>}/>
         </Routes>
 
       </div>

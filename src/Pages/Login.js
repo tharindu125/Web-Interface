@@ -2,10 +2,19 @@ import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import img2 from "../image/img2.jpg";
 
+// import { Route, 
+//   BrowserRouter as Router, 
+//   Routes 
+// } from 'react-router-dom';
+
+import Signin from './Signin';
+import Forgotpw from './Forgotpw';
+
 
 export default class Login extends Component {
   render() {
     return (
+      // <Router>
       <div>
       <div style={{ backgroundImage:`url(${img2})`,
       backgroundRepeat:"no-repeat",
@@ -19,9 +28,8 @@ export default class Login extends Component {
 
               <div className="text-center">
                 Not registered yet?{" "}
-                <span className="link-primary" >
-                  Sign Up
-                </span>
+                <a href="/Signin" target={<Signin/>}>Sign-in</a>
+                
               </div>
 
               <div className="form-group-mt">
@@ -49,7 +57,7 @@ export default class Login extends Component {
               </div>
 
               <p className="forgot-password text-right mt-2">
-                Forgot <a href="#">password?</a>
+                Forgot <a href="/Login/Forgotpw">password?</a>
               </p>
 
             </div>
@@ -57,6 +65,15 @@ export default class Login extends Component {
         </div>
       </div>
       </div>
+
+      /* <div>
+      <Routes>
+        <Route path="/Login/Signin" component={Signin}/>
+        <Route path="/Login/Forgotpw" component={Forgotpw}/>
+      </Routes>
+      </div>
+
+      </Router> */
     );
   }
 }
