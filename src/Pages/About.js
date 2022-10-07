@@ -9,6 +9,9 @@ export default class About extends Component {
         backgroundSize:"contain", 
         height:950,
         width:1518}}>
+        <div>
+          
+        </div>
       </div>
     );
   }

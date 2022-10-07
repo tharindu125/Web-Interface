@@ -7,8 +7,8 @@ import img2 from "../image/img2.jpg";
 //   Routes 
 // } from 'react-router-dom';
 
-import Signin from './Signin';
-import Forgotpw from './Forgotpw';
+//import Signin from './Signin';
+//import Forgotpw from './Forgotpw';
 
 
 export default class Login extends Component {
@@ -28,7 +28,7 @@ export default class Login extends Component {
 
               <div className="text-center">
                 Not registered yet?{" "}
-                <a href="/Signin" target={<Signin/>}>Sign-in</a>
+                <a href="/Signin">Sign-in</a>
                 
               </div>
 
@@ -57,7 +57,7 @@ export default class Login extends Component {
               </div>
 
               <p className="forgot-password text-right mt-2">
-                Forgot <a href="/Login/Forgotpw">password?</a>
+                Forgot <a href="/Forgotpw">password?</a>
               </p>
 
             </div>
