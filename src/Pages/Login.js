@@ -1,18 +1,26 @@
-import React, { Component } from 'react';
+import {useState, useEffect , useRef} from 'react';
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import img2 from "../image/img2.jpg";
 
-// import { Route, 
-//   BrowserRouter as Router, 
-//   Routes 
-// } from 'react-router-dom';
+const Login = () => {
 
-//import Signin from './Signin';
-//import Forgotpw from './Forgotpw';
+const useRef = useRef();
+const errRef = useRef();
 
+const [user, setUser] = useState('');
+const [pwd, setPwd] = useState('');
+const [errMsr, setErrMsg] = useState('');
+const [success, setSuccess] = useState(false);
 
-export default class Login extends Component {
-  render() {
+useEffect(() => {
+  useRef.current.focus();
+}, [])
+
+useEffect(() => {
+  setErrMsg('');
+}, [user, pwd])
+
     return (
       // <Router>
       <div>
@@ -33,18 +41,29 @@ export default class Login extends Component {
               </div>
 
               <div className="form-group-mt">
-                <label>Email address</label>
+                <label htmlFor='email'>Email address</label>
                 <input
                   type="email"
+                  id="email"
+                  ref={userref}
+                  autoComplete="off"
+                  onChange={(e) => setUser(e.target.value)}
+                  value={user}
+                  required
                   className="form-control mt-1"
                   placeholder="Enter email"
+
                 />
               </div>
 
               <div className="form-group-mt">
-                <label>Password</label>
+                <label htmlFor='password'>Password</label>
                 <input
                   type="password"
+                  id="password"  
+                  onChange={(e) => setpwd(e.target.value)}
+                  value={pwd}
+                  required
                   className="form-control mt-1"
                   placeholder="Enter password"
                 />
@@ -75,5 +94,5 @@ export default class Login extends Component {
 
       </Router> */
     );
-  }
 }
+
