@@ -1,28 +1,17 @@
-import {useState, useEffect , useRef} from 'react';
+import React, { Component } from 'react';
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import img2 from "../image/img2.jpg";
+import { Button } from 'react-bootstrap';
 
-const Login = () => {
 
-const useRef = useRef();
-const errRef = useRef();
 
-const [user, setUser] = useState('');
-const [pwd, setPwd] = useState('');
-const [errMsr, setErrMsg] = useState('');
-const [success, setSuccess] = useState(false);
+export default class About extends Component {
 
-useEffect(() => {
-  useRef.current.focus();
-}, [])
 
-useEffect(() => {
-  setErrMsg('');
-}, [user, pwd])
-
-    return (
-      // <Router>
+  render() {
+  return (
+      
       <div>
       <div style={{ backgroundImage:`url(${img2})`,
       backgroundRepeat:"no-repeat",
@@ -45,11 +34,6 @@ useEffect(() => {
                 <input
                   type="email"
                   id="email"
-                  ref={userref}
-                  autoComplete="off"
-                  onChange={(e) => setUser(e.target.value)}
-                  value={user}
-                  required
                   className="form-control mt-1"
                   placeholder="Enter email"
 
@@ -61,18 +45,15 @@ useEffect(() => {
                 <input
                   type="password"
                   id="password"  
-                  onChange={(e) => setpwd(e.target.value)}
-                  value={pwd}
-                  required
                   className="form-control mt-1"
                   placeholder="Enter password"
                 />
               </div>
 
               <div className="d-grid gap-2 mt-3">
-                <button type="submit" className="btn btn-primary">
+                <Button  type="submit" block="block" size="lg">
                   Log-In
-                </button>
+                </Button>
               </div>
 
               <p className="forgot-password text-right mt-2">
@@ -85,14 +66,7 @@ useEffect(() => {
       </div>
       </div>
 
-      /* <div>
-      <Routes>
-        <Route path="/Login/Signin" component={Signin}/>
-        <Route path="/Login/Forgotpw" component={Forgotpw}/>
-      </Routes>
-      </div>
-
-      </Router> */
     );
+  }
 }
 
