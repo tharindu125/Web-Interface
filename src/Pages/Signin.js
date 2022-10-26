@@ -40,7 +40,7 @@ export default class Signin extends Component {
     e.preventDefault();
 
     const RegisterObject = {
-      fullName : this.state.FullName,
+      FullName : this.state.FullName,
       email : this.state.emailAd,
       password : this.state.password,
     };

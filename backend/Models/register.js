@@ -5,7 +5,7 @@ let registerSchema = new Schema({
     FullName : {
         type:String
     },
-    email:{
+    emailAd:{
         type:String
     },
     password:{

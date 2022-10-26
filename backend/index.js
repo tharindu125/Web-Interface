@@ -6,7 +6,7 @@ let dbConfig = require('./database/db')
 
 //express route
 
-const registerRoute = require('../backend/routes/register.route');
+const registerRoute = require('./routes/register.route');
 
 
 //mongodb database connection
