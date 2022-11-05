@@ -11,6 +11,7 @@ import Home from '../Pages/Home';
 import Login from '../Pages/Login';
 import Signin from '../Pages/Signin';
 import Forgotpw from '../Pages/Forgotpw';
+import Form from '../Pages/Form';
 import './Navbarcomp.css';
 
 export default class Navbarcomp extends Component {
@@ -37,7 +38,7 @@ export default class Navbarcomp extends Component {
               <NavDropdown.Item href="#action/3.2"> Another action</NavDropdown.Item>
               <NavDropdown.Item href="/About">About</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/Help">Help</NavDropdown.Item>
+              <NavDropdown.Item href="/Form">Form</NavDropdown.Item>
 
               </NavDropdown>
               
@@ -58,6 +59,7 @@ export default class Navbarcomp extends Component {
           <Route path="/Signin" element={<Signin/>}/>
           <Route path="/Forgotpw" element={<Forgotpw/>}/>
           <Route path="/About" element={<About/>}/>
+          <Route path="/Form" element={<Form/>}/>
         </Routes>
 
       </div>

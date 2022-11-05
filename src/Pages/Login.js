@@ -3,10 +3,47 @@ import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import img2 from "../image/img2.jpg";
 import { Button } from 'react-bootstrap';
+import axios from 'axios';
 
 
 
 export default class About extends Component {
+
+  constructor(props){
+    super(props)
+
+    this.onChangeEmailAd = this.onChangeEmailAd.bind(this);
+    this.onChangePassword = this.onChangePassword.bind(this);
+    this.onUserSubmit = this.onUserSubmit.bind(this);
+
+    this.state = {
+      emailAd : ''
+    }
+  }
+
+  onChangeEmailAd(e){
+    this.setState({emailAd : e.target.value})
+  }
+
+  onChangePassword(e){
+    this.setState({password: e.target.value})
+  }
+
+
+  onUserSubmit(e){
+    e.preventDefault();
+
+    const RegisterObject = {
+      email : this.state.emailAd,
+      password : this.state.password,
+    };
+    
+    console.log(RegisterObject);
+    axios
+      .post('http://localhost:4000/register/signin', RegisterObject)
+      .then(res => console.log(res.data));
+      
+  }
 
 
   render() {
@@ -36,7 +73,7 @@ export default class About extends Component {
                   id="email"
                   className="form-control mt-1"
                   placeholder="Enter email"
-
+                  value={this.state.emailAd} onChange={this.onChangeEmailAd}
                 />
               </div>
 
@@ -47,11 +84,12 @@ export default class About extends Component {
                   id="password"  
                   className="form-control mt-1"
                   placeholder="Enter password"
+                  value={this.state.password} onChange={this.onChangePassword}
                 />
               </div>
 
               <div className="d-grid gap-2 mt-3">
-                <Button  type="submit" block="block" size="lg">
+                <Button  type="submit" block="block" size="lg" onClick={this.onUserSubmit}>
                   Log-In
                 </Button>
               </div>

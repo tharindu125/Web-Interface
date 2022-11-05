@@ -13,9 +13,9 @@ export default class Signin extends Component {
     super(props)
 
     this.onChangeFullName = this.onChangeFullName.bind(this);
-    this.onChangeemailAd = this.onChangeemailAd.bind(this);
-    this.onChangepassword = this.onChangepassword.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.onChangeEmailAd = this.onChangeEmailAd.bind(this);
+    this.onChangePassword = this.onChangePassword.bind(this);
+    this.onUserSubmit = this.onUserSubmit.bind(this);
 
     this.state = {
       FullName : '',
@@ -24,19 +24,21 @@ export default class Signin extends Component {
   }
 
   onChangeFullName(e){
+    
     this.setState({FullName : e.target.value})
+    
   }
 
-  onChangeemailAd(e){
+  onChangeEmailAd(e){
     this.setState({emailAd : e.target.value})
   }
 
-  onChangepassword(e){
+  onChangePassword(e){
     this.setState({password: e.target.value})
   }
 
 
-  onSubmit(e){
+  onUserSubmit(e){
     e.preventDefault();
 
     const RegisterObject = {
@@ -44,6 +46,8 @@ export default class Signin extends Component {
       email : this.state.emailAd,
       password : this.state.password,
     };
+    
+    console.log(RegisterObject);
     axios
       .post('http://localhost:4000/register/signin', RegisterObject)
       .then(res => console.log(res.data));
@@ -62,10 +66,10 @@ export default class Signin extends Component {
             width:1518}}>
 
             <div className="Auth-form-container">
-                <form className="Auth-form">
+                <div className="Auth-form">
                 <div className="Auth-form-content">
                     <h3 className="Auth-form-title">Sign-Up</h3>
-
+                </div>
                 <div className="text-center">
                 Already registered?{" "}
                 <a href="/Login">Log-in</a>
@@ -82,57 +86,31 @@ export default class Signin extends Component {
 
                   <Form.Group controlId='emailAd' >
                     <Form.Label>Email Address :</Form.Label>
-                    <Form.Control type = "email" placeholder='e-mail' value={this.state.emailAd} onChange={this.onChangeemailAd}/>
+                    <Form.Control type = "email" placeholder='e-mail' value={this.state.emailAd} onChange={this.onChangeEmailAd}/>
                   </Form.Group>
 
                   <Form.Group controlId='password' >
                     <Form.Label>password :</Form.Label>
-                    <Form.Control type = "password" placeholder='Password' value={this.state.password} onChange={this.onChangepassword}/>
+                    <Form.Control type = "password" placeholder='Password' value={this.state.password} onChange={this.onChangePassword}/>
                   </Form.Group>
 
+              
+
+                  <div className="d-grid gap-2 mt-3">
+                      
+                          <Button type="submit" block="block" size="lg" onClick={this.onUserSubmit}>
+                          Sign-Up
+                          </Button>
+                      
+                  </div>
+
+                  <p className="forgot-password text-right mt-2">
+                      Forgot <a href="/Forgotpw">password?</a>
+                  </p>
+
                 </Form>
-                {/* <div className="form-group-mt">
-                    <label>Full Name</label>
-                    <input
-                    type="text"
-                    className="form-control mt-1"
-                    placeholder="Enter Full Name"
-                    />
-                </div>
-
-                <div className="form-group-mt">
-                    <label>Email Address</label>
-                    <input
-                    type="email"
-                    className="form-control mt-1"
-                    placeholder="Enter Email"
-                    />
-                </div>
-
-                <div className="form-group-mt">
-                    <label>Password</label>
-                    <input
-                    type="password"
-                    className="form-control mt-1"
-                    placeholder="Enter password"
-                    />
-                </div> */}
-
-                <div className="d-grid gap-2 mt-3">
-                    
-                        <Button type="submit" block="block" size="lg">
-                        Sign-Up
-                        </Button>
-                    
-                </div>
-
-                <p className="forgot-password text-right mt-2">
-                    Forgot <a href="/Forgotpw">password?</a>
-                </p>
-
-                </div>
-                </form>
             </div>
+          </div>
         </div>
       </div>
 
