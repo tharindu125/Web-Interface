@@ -29,8 +29,8 @@ export default class Navbarcomp extends Component {
             <Nav >
               {/* <Nav.Link as={Link} to={"/"}>Home</Nav.Link> */}
               <Nav.Link as={Link} to={"/Login"}>Log-In</Nav.Link>
-              <Nav.Link as={Link} to={"/Signin"}>Sign-In</Nav.Link>
-              ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+              <Nav.Link as={Link} to={"/Signun"}>Sign-In</Nav.Link>
+              ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
     
               <NavDropdown title="Dropdown" id="basic-nav-dropdown" >
 
