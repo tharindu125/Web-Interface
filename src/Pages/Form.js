@@ -84,21 +84,24 @@ class Form extends Component {
 
                 <form className="form-group-mt" onSubmit={this.handleSubmit}>
                     <br/>
-                    <div className='h'>
+                    <div className='form'>
+
                     <label>FirstName :</label> <input type="text" value={this.state.firstName} onChange={this.firstHandler} placeholder="FirstName..." /><br /><br />
                     <label>LastName :</label> <input type="text" value={this.state.lastName} onChange={this.lastHandler} placeholder="LastName..." /><br /><br />
                     <label>Password :</label> <input type="password" value={this.state.password} onChange={this.passwordHandler} placeholder="Password..." /><br /><br />
 
                     <label>Input ECG image : </label><input className='imgInput' type="file" multiple accept="image/*" onChange={this.imageHandler} /><br/><br />
 
-                    <label>Gender :</label><select onChange={this.genderHandler} defaultValue="Select Gender">
+                    <label>Gender :</label>
+                    <select  onChange={this.genderHandler} defaultValue="Select Gender">
                         <option defaultValue>Select Gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
                     </select><br /><br/>
+                    
                     </div>
                     
-                    <div className="d-grid gap-2 mt-3">
+                    <div className="formBtn">
                     <input type="submit" value="Submit" />
                     </div>
 

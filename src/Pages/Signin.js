@@ -78,20 +78,20 @@ export default class Signin extends Component {
                 
                 <Form className="form-group-mt">
 
-                  <Form.Group controlId='FullName' >
+                  <Form.Group className='formSign' controlId='FullName' >
                     <Form.Label>Full Name :</Form.Label>
                     <Form.Control type = "text" placeholder='Full Name' value={this.state.FullName} onChange={this.onChangeFullName}/>
                     
                   </Form.Group>
 
-                  <Form.Group controlId='emailAd' >
+                  <Form.Group className='formSign' controlId='emailAd' >
                     <Form.Label>Email Address :</Form.Label>
                     <Form.Control type = "email" placeholder='e-mail' value={this.state.emailAd} onChange={this.onChangeEmailAd}/>
                   </Form.Group>
 
-                  <Form.Group controlId='password' >
+                  <Form.Group className='formSign' controlId='password' >
                     <Form.Label>password :</Form.Label>
-                    <Form.Control type = "password" placeholder='Password' value={this.state.password} onChange={this.onChangePassword}/>
+                    <Form.Control  type = "password" placeholder='Password' value={this.state.password} onChange={this.onChangePassword}/>
                   </Form.Group>
 
               

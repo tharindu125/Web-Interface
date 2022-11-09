@@ -50,11 +50,13 @@ export default class About extends Component {
   return (
       
       <div>
+
       <div style={{ backgroundImage:`url(${img2})`,
       backgroundRepeat:"no-repeat",
       backgroundSize:"contain", 
       height:950,
       width:1518}}>
+      
         <div className="Auth-form-container">
           <form className="Auth-form">
             <div className="Auth-form-content">
