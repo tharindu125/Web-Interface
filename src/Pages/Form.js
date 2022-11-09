@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import img2 from '../image/img2.jpg';
 // import './CSS/todo.css'
 
 
@@ -68,22 +69,43 @@ class Form extends Component {
         return (
             <div>
 
-                <form onSubmit={this.handleSubmit}>
-                    <h1>Patients Registration</h1>
-                    <label>FirstName :</label> <input type="text" value={this.state.firstName} onChange={this.firstHandler} placeholder="FirstName..." /><br />
-                    <label>LastName :</label> <input type="text" value={this.state.lastName} onChange={this.lastHandler} placeholder="LastName..." /><br />
-                    <label>Password :</label> <input type="password" value={this.state.password} onChange={this.passwordHandler} placeholder="Password..." /><br />
+                <div style={{ backgroundImage:`url(${img2})`,
+                    backgroundRepeat:"no-repeat",
+                    backgroundSize:"contain", 
+                    height:950,
+                    width:1518}}>
 
-                    <label>Input ECG image : </label><input type="file" multiple accept="image/*" onChange={this.imageHandler} /><br/>
+                <div className="Auth-form-container">
+                    <div className="Auth-form">
+                    <div className="Auth-form-content">
+                        <h2 className="Auth-form-title">Patients Registration</h2>
+                    </div>
+                    
+
+                <form className="form-group-mt" onSubmit={this.handleSubmit}>
+                    <br/>
+                    <div className='h'>
+                    <label>FirstName :</label> <input type="text" value={this.state.firstName} onChange={this.firstHandler} placeholder="FirstName..." /><br /><br />
+                    <label>LastName :</label> <input type="text" value={this.state.lastName} onChange={this.lastHandler} placeholder="LastName..." /><br /><br />
+                    <label>Password :</label> <input type="password" value={this.state.password} onChange={this.passwordHandler} placeholder="Password..." /><br /><br />
+
+                    <label>Input ECG image : </label><input className='imgInput' type="file" multiple accept="image/*" onChange={this.imageHandler} /><br/><br />
 
                     <label>Gender :</label><select onChange={this.genderHandler} defaultValue="Select Gender">
                         <option defaultValue>Select Gender</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
-                    </select><br />
+                    </select><br /><br/>
+                    </div>
+                    
+                    <div className="d-grid gap-2 mt-3">
                     <input type="submit" value="Submit" />
-                </form>
+                    </div>
 
+                </form>
+                </div>
+                </div>
+            </div>
             </div>
             
         )
