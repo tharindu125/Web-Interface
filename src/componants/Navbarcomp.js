@@ -12,6 +12,7 @@ import Login from '../Pages/Login';
 import Signin from '../Pages/Signin';
 import Forgotpw from '../Pages/Forgotpw';
 import Form from '../Pages/Form';
+import Form2 from '../Pages/Form2';
 import './Navbarcomp.css';
 
 export default class Navbarcomp extends Component {
@@ -29,13 +30,13 @@ export default class Navbarcomp extends Component {
             <Nav >
               {/* <Nav.Link as={Link} to={"/"}>Home</Nav.Link> */}
               <Nav.Link as={Link} to={"/Login"}>Log-In</Nav.Link>
-              <Nav.Link as={Link} to={"/Signun"}>Sign-In</Nav.Link>
-              ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
+              <Nav.Link as={Link} to={"/Signin"}>Sign-up</Nav.Link>
+              
     
               <NavDropdown title="Dropdown" id="basic-nav-dropdown" >
 
               <NavDropdown.Item href="/Forgotpw">Forgot password</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2"> Another action</NavDropdown.Item>
+              <NavDropdown.Item href="/Form2"> Form2</NavDropdown.Item>
               <NavDropdown.Item href="/About">About</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/Form">Form</NavDropdown.Item>
@@ -60,6 +61,7 @@ export default class Navbarcomp extends Component {
           <Route path="/Forgotpw" element={<Forgotpw/>}/>
           <Route path="/About" element={<About/>}/>
           <Route path="/Form" element={<Form/>}/>
+          <Route path="/Form2" element={<Form2/>}/>
         </Routes>
 
       </div>
