@@ -4,10 +4,17 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import img2 from "../image/img2.jpg";
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
-
+import { useNavigate } from 'react-router-dom';
+import Form from "./Form"
 
 
 export default class About extends Component {
+
+  // const navigate = useNavigate();
+
+  //   const onUserSubmit = () => {
+  //     navigate("/Form");
+  //   };
 
   constructor(props){
     super(props)
@@ -44,6 +51,8 @@ export default class About extends Component {
       .then(res => console.log(res.data));
       
   }
+
+    
 
 
   render() {
