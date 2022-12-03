@@ -76,7 +76,7 @@ export default class Signin extends Component {
                 
                 </div>
                 
-                <Form className="form-group-mt">
+                <Form className="signForm">
 
                   <Form.Group className='formSign' controlId='FullName' >
                     <Form.Label>Full Name :</Form.Label>

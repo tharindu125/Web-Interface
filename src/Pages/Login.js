@@ -73,7 +73,7 @@ export default class About extends Component {
 
               <div className="text-center">
                 Not registered yet?{" "}
-                <a href="/Signin">Sign-in</a>
+                <a href="/Signin">Sign-up</a>
                 
               </div>
 
