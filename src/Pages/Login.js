@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import Form from "./Form"
 
 
-export default class About extends Component {
+export default class Login extends Component {
 
   // const navigate = useNavigate();
 
